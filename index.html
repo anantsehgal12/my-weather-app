@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>My Weather</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="shortcut icon" href="https://i.ibb.co/5g05r0bf/icon.png" type="image/x-icon">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@2.3.0/dist/flowbite.min.js"></script>
+  </head>
+  <body class="body dark:text-white">
+    <!--Nav Start-->
+    <nav class="bg-white border-gray-200 dark:bg-gray-900">
+      <div
+        class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4"
+      >
+        <a href="" class=" logoo flex items-center justify-center space-x-3 rtl:space-x-reverse">
+          <img src="https://i.ibb.co/5g05r0bf/icon.png" class="h-8" alt="My Weather Logo" />
+          <span
+            class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white"
+            >My Weather</span
+          >
+        </a>
+        <div class="flex md:order-2">
+          <!--<button
+            type="button"
+            data-collapse-toggle="navbar-search"
+            aria-controls="navbar-search"
+            aria-expanded="false"
+            class="md:hidden text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm me-1"
+          >
+            <svg
+              class="w-5 h-5"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 20 20"
+            >
+              <path
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"
+              />
+            </svg>
+            <span class="sr-only">Search</span>
+          </button>-->
+          <div class="relative md:block sm:mt-4 md:mt-4 lg:mt-0 xl:mt-0">
+            <div
+              class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none"
+            >
+              <svg
+                class="w-4 h-4 text-gray-500 dark:text-gray-400"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 20 20"
+              >
+                <path
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"
+                />
+              </svg>
+              <span class="sr-only">Search icon</span>
+            </div>
+            <div class="display flex w-full search">
+              <input
+                type="text"
+                id="search-navbar"
+                class="block w-70 h-12 p-2 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                placeholder="Search..."
+              />
+              <button class="searchbtn" id="search-nav-btn">Search</button>
+            </div>
+
+            <!--<button
+            data-collapse-toggle="navbar-search"
+            type="button"
+            class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+            aria-controls="navbar-search"
+            aria-expanded="false"
+          >
+            <span class="sr-only">Open main menu</span>
+            <svg
+              class="w-5 h-5"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 17 14"
+            >
+              <path
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M1 1h15M1 7h15M1 13h15"
+              />
+            </svg>
+          </button>-->
+          </div>
+          <div
+            class="items-center justify-between hidden w-80 md:flex md:w-auto md:order-1"
+            id="navbar-search"
+          >
+            <div class="relative mt-3 md:hidden">
+              <div
+                class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none"
+              >
+                <svg
+                  class="w-4 h-4 text-gray-500 dark:text-gray-400"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"
+                  />
+                </svg>
+              </div>
+              <div class="display flex w-full search">
+                <input
+                  type="text"
+                  id="search-navbar"
+                  class="block w-60 p-2 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                  placeholder="Search..."
+                />
+                <button class="searchbtn" id="search-nav-btn">Search</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!--Nav End-->
+
+    <!--Main Start-->
+    <div class="main bg-linear-200 from-black to-blue-900">
+      <div class="heading">
+        <h1 class="heading-h1">Weather for <span id="cityname"></span></h1>
+      </div>
+      <div class="card-container">
+        <div class="card text-blue-900 dark:text-white">
+          <div class="maind">
+            <div class="weather">
+              <h1 class="headtemp">City Info</h1>
+            </div>
+            <div class="othertemps">
+              <div class="wfl">
+                <h1 class="feels-temp-text">
+                  City Name:- <span id="cityname1"></span>
+                </h1>
+              </div>
+              <div class="wmax">
+                <h1 class="min-temp-text">
+                  Latitude:- <span id="city_lon"></span>
+                </h1>
+              </div>
+              <div class="wmin">
+                <h1 class="min-temp-text">
+                  Wind Gust:- <span id="city_lat"></span>
+                </h1>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card text-blue-900 dark:text-white">
+          <div class="maind">
+            <div class="weather">
+              <h1 class="headtemp">Temperature</h1>
+              <h1 class="temp"><span id="temperature"></span></h1>
+            </div>
+            <div class="othertemps">
+              <div class="wfl">
+                <h1 class="feels-temp-text">
+                  Feels Like:- <span id="feels_like"></span>
+                </h1>
+              </div>
+              <div class="wmin">
+                <h1 class="min-temp-text">
+                  Min. Temperature:- <span id="min_temp"></span>
+                </h1>
+              </div>
+              <div class="wmax">
+                <h1 class="min-temp-text">
+                  Max. Temperature:- <span id="max_temp"></span>
+                </h1>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card text-blue-900 dark:text-white">
+          <div class="maind">
+            <div class="weather">
+              <h1 class="headtemp">Humidity</h1>
+              <h1 class="temp"><span id="humidity"></span></h1>
+            </div>
+            <div class="othertemps">
+              <div class="wfl">
+                <h1 class="feels-temp-text">
+                  Visibility:- <span id="visibility"></span>
+                </h1>
+              </div>
+              <div class="wmin">
+                <h1 class="min-temp-text">
+                  Pressure:- <span id="pressure"></span>
+                </h1>
+              </div>
+              <div class="wmax">
+                <h1 class="min-temp-text">
+                  Sea Level:- <span id="sealevel"></span>
+                </h1>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card text-blue-900 dark:text-white">
+          <div class="maind">
+            <div class="weather">
+              <h1 class="headtemp">Wind Info</h1>
+              <h1 class="temp"><span id="wind_speed"></span></h1>
+            </div>
+            <div class="othertemps">
+              <div class="wfl">
+                <h1 class="feels-temp-text">
+                  Wind Speed:- <span id="wind_speed1"></span>
+                </h1>
+              </div>
+              <div class="wmax">
+                <h1 class="min-temp-text">
+                  Wind Degree:- <span id="wind_degree"></span>
+                </h1>
+              </div>
+              <div class="wmin">
+                <h1 class="min-temp-text">
+                  Wind Gust:- <span id="wind_gust"></span>
+                </h1>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--Scripts Start-->
+
+    <script src="script.js"></script>
+
+    <!--Scripts End-->
+  </body>
+</html>

@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+*{
+    font-family: 'Inter', sans-serif;
+}
+.searchbtn {
+    background-color: #0e428e;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 20px;
+}
+.card-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    height: 500px;
+}
+.heading{
+    font-size: 60px;
+    font-weight: bold;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    text-align: center;
+}
+.heading-h1{
+    margin-top: 60px;
+    margin-bottom: 20px;
+}
+.card{
+    width: 90%;
+    max-width: 300px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    height: 400px;
+    background-color: linear-gradient(135deg, #00feba, #5b548a);
+    border-radius: 20px;
+    padding: 40px 35px;
+    text-align: center;
+    border-radius: 25px;
+    border: 1px solid white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.temp{
+    font-size: 70px;
+    font-weight: 700;
+    color: cadetblue;
+}
+.headtemp{
+    font-size: 35px;
+    font-weight: 500;
+    color: white;
+    font-weight: bold;
+}
+.feels-temp-text, .min-temp-text, .max-temp-text{
+    font-size: 18px;
+    font-weight: 600;
+}
+.feels-temp-text span, .min-temp-text span, .max-temp-text span{
+    font-size: 21px;
+    font-weight: 800;
+}
+@media screen and (max-width: 768px) {
+    .searchbtn{
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 5px;
+    }
+    .card-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0;
+    height: 2100px;
+}
+.heading{
+    font-size: 60px;
+    font-weight: bold;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    text-align: center;
+}
+.heading-h1{
+    margin-top: 60px;
+    margin-bottom: 40px;
+}
+.card{
+    width: 90%;
+    max-width: 300px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    height: 400px;
+    background-color: linear-gradient(135deg, #00feba, #5b548a);
+    border-radius: 20px;
+    padding: 40px 35px;
+    text-align: center;
+    border-radius: 25px;
+    border: 1px solid white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.temp{
+    font-size: 70px;
+    font-weight: 700;
+    color: cadetblue;
+}
+.headtemp{
+    font-size: 35px;
+    font-weight: 500;
+    color: white;
+    font-weight: bold;
+}
+.feels-temp-text, .min-temp-text, .max-temp-text{
+    font-size: 18px;
+    font-weight: 600;
+}
+.feels-temp-text span, .min-temp-text span, .max-temp-text span{
+    font-size: 21px;
+    font-weight: 800;
+}
+.logoo{
+    margin-bottom: 20px;
+    width: 100%;;
+}
+}
+.logoo{
+    font-weight:bolder;
+}
