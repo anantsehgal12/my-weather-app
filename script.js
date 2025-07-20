@@ -48,3 +48,23 @@ function setupSearchListeners() {
     });
 }
 setupSearchListeners();
+
+const api_Geo = "1ccfcaf479f944c88e6ad5ab354ada7c";
+
+async function getGeoLocation() {
+    navigator.geolocation.getCurrentPosition(async function(position) {
+        const lat = position.coords.latitude;
+        const lon = position.coords.longitude;
+        const api_Geo_Url = `https://api.opencagedata.com/geocode/v1/json?q=${lat}+${lon}&key=${api_Geo}`;
+        const response = await fetch(api_Geo_Url);
+        const result = await response.json();
+        console.log(result);
+        // Get city from geocoding result and check weather
+        const city = result.results[0]?.components?.city;
+        if (city) {
+            checkWeather(city);
+        }
+    });
+}
+
+getGeoLocation();
